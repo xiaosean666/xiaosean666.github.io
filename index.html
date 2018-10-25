@@ -24,11 +24,11 @@ $querystring = $_SERVER["QUERY_STRING"];
 
 //获取问号后面的参数
 
-
+echo "111";
 //验证当前访问域名（就是你的新域名）：若非引号内的域名，则进行如下跳转——
 
 if ($querystring !== '') {
-
+echo "121";
 	//验证文件名后是否有参数，如果有参数则跳转到——
 
 	header('HTTP/1.1 301 Moved Permanently');
@@ -40,7 +40,7 @@ if ($querystring !== '') {
 	//跳转到我的新域名地址【带参数】
 
 } elseif ($filename == 'index.php') {
-
+echo "22";
 	//如果是主页则直接跳转到新域名
 
 	header('HTTP/1.1 301 Moved Permanently');
@@ -52,7 +52,7 @@ if ($querystring !== '') {
 	//跳转到我的新域名
 
 } else {
-
+echo "333";
 	//如果无参数则跳转到——
 
 	header('HTTP/1.1 301 Moved Permanently');
